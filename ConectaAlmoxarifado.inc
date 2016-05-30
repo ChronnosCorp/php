@@ -1,16 +1,20 @@
 <?php
 
+<?php
+//Pra concertar um erro na conex�o do PHP
+error_reporting (E_ALL & ~ E_NOTICE & ~ E_DEPRECATED);
+
 //local onde esta rodando o php
-$hostname = "localhost";
+$hostname = "mysql.hostinger.com.br";
 
 //nome do usario que tem acesso
-$username = "root";
+$username = "u938528970_crono";
 
 //senha do usuario - em branco
-$senha = "usbw";
+$senha = "xt1069@nois";
 
 //banco de dados desejado
-$banco = "almoxarifado";
+$banco = "u938528970_AMFAD";
 
 //abre uma conexao com o servidor MySql
 $conexao = mysql_connect($hostname, $username,$senha);
