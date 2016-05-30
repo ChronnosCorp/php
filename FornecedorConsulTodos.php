@@ -15,7 +15,8 @@
 include "ConectaAlmoxarifado.inc";
 
 
-$resultado = mysql_query("SELECT * FROM fornecedor");
+$resultado = mysql_query("SELECT * FROM fornecedor")
+or die("Não há nenhum Dado no Banco");
 $linhas = mysql_num_rows($resultado);
 $f=0;
 
