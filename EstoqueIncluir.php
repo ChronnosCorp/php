@@ -20,7 +20,7 @@ $qt_est = $_POST["qt"];
 $pon_rep = $_POST["pr"];
 $cod_forn = $_POST["cod"];
 
-$resultado = mysql_query("insert into estoque(est_nome,est_qtd,est_pto,est_for) "
+$resultado = mysql_query("insert into 'u938528970_AMFAD'.'estoque'(est_nome,est_qtd,est_pto,est_for) "
         . "VALUES('$nom_est',$qt_est,$pon_rep,$cod_forn)")
         or die(mysql_error());
 
