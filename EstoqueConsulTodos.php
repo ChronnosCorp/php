@@ -15,8 +15,10 @@
 include "ConectaAlmoxarifado.inc";
 
 
-$resultado = mysql_query("SELECT * FROM estoque");
-$resultado2 = mysql_query("SELECT * FROM fornecedor, estoque WHERE for_cod = est_for");
+$resultado = mysql_query("SELECT * FROM estoque")
+or die("Não há nenhum Dado no Banco");
+$resultado2 = mysql_query("SELECT * FROM fornecedor, estoque WHERE for_cod = est_for")
+or die("Codigo de Fornecedor não Encontrado!");
 $linhas = mysql_num_rows($resultado);
 $f=0;
 
