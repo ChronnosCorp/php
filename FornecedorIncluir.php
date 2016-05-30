@@ -4,6 +4,8 @@
         <meta charset="UTF-8"/>
         <link href="../css/estilo.css" rel="stylesheet" type="text/css"/>
         <script src="../js/verificacaoFornecedor.js" type="text/javascript"></script>
+        <link rel="shortcut icon" href="../ico/favicon.ico"/>
+        <link rel="icon" type="image/gif" href="../ico/favicon.ico"/>
     </head>
     <body>
         <div class="interface">
