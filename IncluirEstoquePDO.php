@@ -28,9 +28,7 @@
 
 
 
-            # Conexão
-            $conn = new PDO('mysql:host=mysql.hostinger.com.br;dbname=u938528970_amfad', 'u938528970_crono', 'bdxt1069nois');
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            include "ConectaAlmoxarifado.inc";
             $sql = "INSERT INTO `ESTOQUE`(`est_nome`, `est_qtd`, `est_pto`, `est_for`) VALUES (?,?,?,?)";
             try {
                 $stmt = $conn->prepare($sql);
@@ -39,11 +37,12 @@
                 $stmt->bindValue (3, $pon_rep);
                 $stmt->bindValue (4, $cod_forn, PDO::PARAM_INT);
                 $stmt->execute();
-                echo $stmt->rowCount();
+                //echo $stmt->rowCount();
             } catch (PDOException $e) {
                 echo 'Erro meards: ' . $e->getMessage();
             }
             echo "<p>Registro Inserido Com Sucesso!";
+            $conn = null;//fechar conexão
             ?>
             <br><br>
             <div class = "DivVoltares">
