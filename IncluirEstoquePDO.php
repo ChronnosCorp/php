@@ -28,7 +28,7 @@
 
 
 
-            include "ConectaAlmoxarifado.inc";
+            include "ConectaAlmoxarifado.php";
             $sql = "INSERT INTO `ESTOQUE`(`est_nome`, `est_qtd`, `est_pto`, `est_for`) VALUES (?,?,?,?)";
             try {
                 $stmt = $conn->prepare($sql);

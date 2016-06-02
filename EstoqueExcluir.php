@@ -12,7 +12,7 @@
 <?php
 
 //Conexao Banco de Dados
-include "ConectaAlmoxarifado.inc";
+include "ConectaAlmoxarifado.php";
 
 //variaveis de exclusao de dados
 $cod_est_exc = $_POST["codee"]; //variavel do cod de exclusao

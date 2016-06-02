@@ -10,7 +10,7 @@
 $username = "u938528970_crono";
 
 //senha do usuario
-$senha = "bdxt1069@nois";
+$senha = "bdxt1069nois";
 
 //banco de dados desejado
 //$banco = "u938528970_amfad";

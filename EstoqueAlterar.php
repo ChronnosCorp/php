@@ -12,7 +12,7 @@
 <?php
 
 //Conexao Banco de Dados
-include "ConectaAlmoxarifado.php";
+include './ConectaAlmoxarifado.php';
 
 //variaveis de alteraçao de dados
 $cod_est_alt = $_POST["codea"]; //variavel do cod de alteraçao
@@ -25,18 +25,17 @@ $cod_forn_alt = $_POST["coda"];
 try {
 $cont = 0;
 
-/*$resultadoCod = mysql_query($sql);
-@$id = mysql_result($resultadoCod, 0, 0);*/
-
 function getFruit($conn) {
-    $sql = "select * from u938528970_amfad.estoque where est_cod = $cod_est_alt";
-    foreach ($conn->query($sql) as $row)
+    $sql = "select * from u938528970_amfad.estoque";
+    $conn->query($sql);
+        $rowset = $stmt->fetchAll(PDO::FETCH_NUM);
+    foreach ($rowset as $row)
         {        
-        print $row['est_cod'] . "\t"; 
-        print $row['est_nome'] . "\t";   
-        print $row['est_qtd'] . "\t"; 
-        print $row['est_pto'] . "\t"; 
-        print $row['est_for'] . "\n"; 
+        echo $row['est_cod'] . "\t"; 
+        echo $row['est_nome'] . "\t";   
+        echo $row['est_qtd'] . "\t"; 
+        echo $row['est_pto'] . "\t"; 
+        echo $row['est_for'] . "\n"; 
         }
     }
 
