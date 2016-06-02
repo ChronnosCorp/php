@@ -26,8 +26,6 @@
                     $pto = $row[8];
                     $nome_for = $row[1];
 
-
-
                     echo"Registro $cod <br>";
                     echo"-------------------------------------------------------------<br>";
                     echo "Codigo do estoque: $cod <br>";
@@ -41,53 +39,6 @@
             } catch (PDOException $ex) {
                 echo "Erro: $ex";
             }
-            /*
-              function printResultSet(&$roset, $i) {
-              echo "Registro $i:<br>";
-              foreach ($roset as $row) {
-              foreach ($row as $col) {
-              echo $col . "\t";
-              }
-              foreach ($array as $value) {
-
-              }
-              echo "<br>";
-              }
-              echo "<br>";
-              }
-             */
-            /*
-              $resultado = mysql_query("SELECT * FROM estoque")
-              or die("Não há nenhum Dado no Banco");
-              $resultado2 = mysql_query("SELECT * FROM fornecedor, estoque WHERE for_cod = est_for")
-              or die("Codigo de Fornecedor não Encontrado!");
-              $linhas = mysql_num_rows($resultado);
-              $f=0;
-
-              for ($i = 0; $i < $linhas; $i++) {
-
-              $cod_for =  mysql_result($resultado, $i, "est_for");
-              $cod = mysql_result($resultado, $i, "est_cod");
-              $nome = mysql_result($resultado, $i, "est_nome");
-              $qtd = mysql_result($resultado, $i, "est_qtd");
-              $pto = mysql_result($resultado, $i, "est_pto");
-              $nome_for =  mysql_result($resultado2, $i, "for_nome");
-
-              $f++;
-
-              echo"Registro $f<br>";
-              echo"-------------------------------------------------------------<br>";
-              echo "Codigo do estoque: $cod <br>";
-              echo "Nome do item de estoque: $nome <br>";
-              echo "Quantidade do estoque: $qtd <br>";
-              echo "Ponto de reposicao: $pto <br>";
-              echo "Nome do fornecedor: $nome_for <br>";
-              echo"-------------------------------------------------------------<br>";
-              echo"<br>";
-
-              }
-
-              mysql_close($conexao); */
             ?>
             <br><br>
             <div class = "DivVoltares">
